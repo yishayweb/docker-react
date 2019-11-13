@@ -3,8 +3,8 @@ sudo: required
 services:
   - docker
 
-before install:
+before_install:
   - docker build -t yishayf/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run yishayf/docker-react npm run test -- --coverage
+  - docker run -e CI=true yishayf/docker-react npm run test
