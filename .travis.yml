@@ -3,7 +3,7 @@ services:
   - docker
 
 before install:
-  - docker build -t yishayf/docker-react -f Dockerfile.dev .
+  - docker build -t yishayweb/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true yishayf/docker-react npm run test
+  - docker run -e CI=true yishayweb/docker-react npm run test
